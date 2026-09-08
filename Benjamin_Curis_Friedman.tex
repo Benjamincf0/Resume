@@ -17,8 +17,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{tabularx} \input{glyphtounicode}
 \usepackage{fontawesome5}
 
 
@@ -79,8 +78,8 @@
 \newcommand{\resumeSubheadingEducation}[6]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3}\small{ #6} & \textit{\small #4} \\
+      \textbf{#1}\small{ #6} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
       \multicolumn{2}{l}{\small\hspace{1em}#5}
     \end{tabular*}\vspace{-7pt}
 }
@@ -122,10 +121,11 @@
 
 \begin{center}
     \textbf{\Huge \scshape Benjamin Curis-Friedman} \\ \vspace{1pt}
-    \small 438-346-5109 $|$ \href{mailto:x@x.com}{\underline{benjamin.curis-friedman@mail.mcgill.ca}} $|$ 
+    \small 438-346-5109 $|$
+    \href{https://bencf.dev}{\underline{bencf.dev}} $|$
+    \href{mailto:benjamin.curis-friedman@mail.mcgill.ca}{\underline{benjamin.curis-friedman@mail.mcgill.ca}} $|$ 
     \href{https://linkedin.com/in/benjaminc-f}{\underline{linkedin.com/in/benjaminc-f}} $|$
-    \href{https://github.com/benjamincf0}{\underline{github.com/benjamincf0}} $|$
-    \href{https://bencf.dev}{\underline{bencf.dev}}
+    \href{https://github.com/benjamincf0}{\underline{github.com/benjamincf0}}
 \end{center}
 
 
@@ -134,12 +134,8 @@
   \resumeSubHeadingListStart
     \resumeSubheadingEducation
       {McGill University}{Montreal, QC}
-      {Bachelor of Software Engineering COOP -- Minor of Mathematics}{Aug. 2024 -- Dec. 2027}
+      {Bachelor of Software Engineering -- Minor of Mathematics}{Aug. 2024 -- Dec. 2027}
       {Awards (6000\$): Alma Mater Entrance Scholarship, Class of Engineering '83 Scholarship}{  3.96 GPA}
-    \resumeSubheadingEducation
-      {Stanford Online}{}
-      {Machine Learning Specialization by Andrew Ng.}{May 2025 -- August 2025}
-      {Covering regression, deep-learning, random forests, and ML engineering practices.}{  100\% Grade}
   \resumeSubHeadingListEnd
 
 
@@ -151,23 +147,23 @@
     {Software Developer Intern}{Jan. 2026 -- Aug. 2026}
     {Rogue Research Inc}{Montreal, QC}
     \resumeItemListStart
-      \resumeItem{Coded vertex shaders in OpenGL to enable realistic optical distortion of a scene.}
-      \resumeItem{Contributed to open source libraries (pyvista \& vtk), improving code coverage and rendering speed by 10x.}
+      \resumeItem{Contributed to well-known open source projects (pyvista \& vtk), improving rendering efficiency by \textbf{50x}.}
+      \resumeItem{Coded \textbf{vertex shaders in GLSL} to enable realistic optical distortion of a scene.}
       \resumeItem{Engineered a 3D robot emulator application using pyvista, enabling accurate surgery planning.}
-      \resumeItem{Refactored a brain surgery robot networking protocol to make it resilient to corrupt data packets.}
-      \resumeItem{Implemented two robotic brain stimulation papers, levaraging bayesian optimization using Pytorch.}
+      \resumeItem{Refactored a brain surgery robot \textbf{networking protocol packet parser}, making it resilient to corrupt data.}
+      \resumeItem{Implemented two robotic brain stimulation papers, levaraging \textbf{bayesian optimization using Pytorch}.}
+      \resumeItem{Implemented the \textbf{SSIM image comparison algorithm} for CI UITests using the Apple vImage framework.}
       \resumeItem{Developed unit tests for existing classes and methods to improve code coverage in Objective-C.}
-      \resumeItem{Implemented a vectorized SSIM image comparison algorithm for CI UITests using Apple's vImage framework.}
     \resumeItemListEnd
 
     \resumeSubheading
       {Artificial Intelligence Intern}{May 2025 -- Dec. 2025}
       {iSMART AI Lab}{Montreal, QC}
       \resumeItemListStart
-        \resumeItem{Developed a video synchronization \& compression library using FFmpeg and OpenCV to prepare for training.}
-        \resumeItem{Coded a data pre-processing pipeline to clean raw human vital signals for machine learning models.}
+        \resumeItem{Coded a \textbf{data pre-processing pipeline} in Python to clean raw human vital signals.}
         \resumeItem{Built and programmed a task labeling device using Arduino and C++ to split recording segments efficiently.}
-        \resumeItem{Created a high quality multi-modal dataset of over 50 hours of recordings from dozens of study participants.}
+        \resumeItem{Created a \textbf{50+ hour multi-modal dataset} of recordings from dozens of study participants.}
+        \resumeItem{Developed a \textbf{video processing (synchronization \& compression) library} using FFmpeg and OpenCV.}
       \resumeItemListEnd
  
 % -----------Multiple Positions Heading-----------
@@ -202,6 +198,14 @@
 
   \resumeSubHeadingListEnd
 
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://www.credly.com/badges/587abda5-297e-4788-9d12-9ccd1c568189}{AWS Certified Solutions Architect - Associate (SAA-C03)}}}{Sept. 2026}
+      \resumeProjectHeading
+          {\textbf{\href{https://coursera.org/share/97ceff06cffa8ccd1aa57abdadd34526}{Machine Learning Specialization - Stanford Online}}}{Jul. 2025}
+    \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -212,7 +216,6 @@
             \resumeItem{Built an MCP server for a student portal, empowering agents to help with homework and emails.}
             \resumeItem{Integrated OAuth2 to let users login from their favourite MCP client (i.e. Codex / Claude code).}
             \resumeItem{Automated a secondary login flow using a backend playwright instance to log into Omnivox on a user's behalf.}
-            \resumeItem{Reverse engineered the Omnivox website to replicate the http headers and intercept the bearer token.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{AI Library From Scratch} \href{https://github.com/Benjamincf0/AI}{\faGithub} $|$ \emph{Python, NumPy, TensorFlow, Keras, PyGame}}{Jul. 2025}
